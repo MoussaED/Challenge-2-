@@ -1,0 +1,38 @@
+Sub challenge_2_pt2()
+
+
+Dim Greatest_inc As Single
+Dim Greatest_dec As Single
+Dim Greatest_vol As Double
+
+
+For i = 2 To 3000
+     If Cells(i, 11) > Greatest_inc Then
+        Greatest_inc = Cells(i, 11).Value
+        
+        Cells(2, 19).Value = Greatest_inc
+        Cells(2, 18).Value = Cells(i, 9).Value
+        
+    ElseIf Cells(i, 11) < Greatest_dec Then
+    
+        Greatest_dec = Cells(i, 11).Value
+        
+        Cells(3, 19).Value = Greatest_dec
+        Cells(3, 18).Value = Cells(i, 9).Value
+        
+    ElseIf Cells(i, 12) > Greatest_vol Then
+    
+        Greatest_vol = Cells(i, 12).Value
+        
+        Cells(4, 19).Value = Greatest_vol
+        Cells(4, 18).Value = Cells(i, 9).Value
+        
+    End If
+
+Next i
+            
+            
+            
+
+End Sub
+
